@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sharooms</title>
+    <link rel="icon" type="image/png" href="assets/icon_sharooms.png">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Global & Custom Theme Configuration */
+        :root {
+            --primary-highlight: #FFFFFF;
+            --background-dark: #0a0a0a;
+            --card-surface: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--primary-highlight);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sharooms-logo {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+            margin-left: -15px;
+        }
+
+        @media (min-width: 768px) {
+            .sharooms-logo {
+                height: 60px;
+                margin-left: -25px;
+            }
+        }
+
+        /* Dropdown CSS */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu, #mobile-menu {
+            border: none !important;
+            border-radius: 0 !important;
+        }
+
+        .mobile-menu-open {
+            display: flex;
+        }
+
+        /* Prevent text selection cursor and add premium selection look */
+        * {
+            cursor: default;
+        }
+
+        a,
+        button,
+        [onclick],
+        .plugin-card,
+        .category-btn {
+            cursor: pointer;
+        }
+
+        a *,
+        button *,
+        [onclick] *,
+        .plugin-card *,
+        .category-btn * {
+            cursor: inherit;
+        }
+
+        ::selection {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-[10000]">
+        <!-- Header Background & Blur -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm -z-10"></div>
+        <nav class="relative w-full flex items-center justify-between px-6 py-4 md:px-12 md:py-6">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/Sharooms%20logo.png" alt="Sharooms Logo" class="sharooms-logo"
+                    onerror="this.onerror=null;this.src='https://placehold.co/150x40/000000/FFFFFF?text=SHAROOMS+ERROR'">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-12 items-center font-medium">
+                <div class="relative dropdown">
+                    <button class="flex items-center text-gray-400 hover:text-white transition duration-150">
+                        Products
+                        <span data-lucide="chevron-down" class="w-4 h-4 ml-1"></span>
+                    </button>
+                    <div
+                        class="dropdown-menu absolute hidden top-full w-56 shadow-2xl overflow-hidden z-[100] bg-black/80 backdrop-blur-sm">
+                        <a href="fseq.html"
+                            class="block px-5 py-3 text-sm text-gray-300 hover:bg-gray-800 transition">FSEQ</a>
+                        <a href="lazy-serum.html"
+                            class="block px-5 py-3 text-sm text-gray-300 hover:bg-gray-800 transition border-t border-gray-800">Lazy
+                            Serum</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-white transition duration-150">About me</a>
+
+                <a href="#"
+                    class="inline-flex items-center bg-zinc-800 text-white px-6 py-2 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-zinc-700 transition shadow-lg whitespace-nowrap">
+                    <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 mr-2">
+                    MY GUMROAD SHOP
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn"
+                class="md:hidden text-gray-300 p-2 rounded-lg hover:bg-gray-800 transition duration-150">
+                <span data-lucide="menu" class="w-6 h-6"></span>
+            </button>
+        </nav>
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu"
+            class="hidden flex-col md:hidden shadow-xl absolute top-full left-0 w-full z-50 bg-black/80 backdrop-blur-sm">
+            <div class="px-6 py-2 font-semibold text-gray-400">Products</div>
+            <a href="fseq.html"
+                class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-800 transition">FSEQ</a>
+            <a href="lazy-serum.html"
+                class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-800 transition">Lazy Serum</a>
+            <a href="about.html"
+                class="block px-6 py-3 text-gray-300 hover:bg-gray-800 transition border-t border-gray-800">About me</a>
+            <a href="#" class="block px-6 py-4 bg-zinc-800 text-white font-bold uppercase tracking-wider text-sm hover:bg-zinc-700 transition border-t border-zinc-800 flex items-center">
+                <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 mr-3">
+                MY GUMROAD SHOP
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container p-4 md:p-12 min-h-[calc(100vh-150px)]">
+        <div class="text-center mb-12">
+            <h1 class="text-2xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wider leading-tight">
+                "DRIVEN BY CHAOS. <br> GUIDED BY DATA."
+            </h1>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-start max-w-7xl mx-auto">
+            <!-- Left Side: Image -->
+            <div class="w-full lg:w-1/3 lg:sticky lg:top-32">
+                <img src="assets/me.png" alt="Me" class="w-full rounded-2xl shadow-2xl border border-gray-800" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0a0a0a/ffffff?text=ME'">
+                <div class="mt-6 hidden lg:flex justify-center space-x-6">
+                    <span data-lucide="music" class="text-gray-600 w-8 h-8 hover:text-white transition cursor-pointer"></span>
+                    <span data-lucide="code" class="text-gray-600 w-8 h-8 hover:text-white transition cursor-pointer"></span>
+                    <span data-lucide="terminal" class="text-gray-600 w-8 h-8 hover:text-white transition cursor-pointer"></span>
+                </div>
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="w-full lg:w-2/3">
+                <div class="p-0 md:p-4">
+
+                    
+                    <p class="text-white text-xl leading-relaxed mb-8 font-light italic border-l-4 border-gray-700 pl-6">
+                        I’m a Berlin-based musician who lives for the high-wire act between raw energy and clinical logic. In my world, it’s all about Coke and Numbers.
+                    </p>
+        
+                    <div class="text-gray-400 text-lg leading-relaxed space-y-6">
+                        <p>
+                            When I discovered Ableton Live, it wasn't just a DAW—it was a revelation. I fell in love with its architectural depth and the infinite possibilities it offered. But as my music evolved, I found myself fighting the software instead of flowing with it. I was tired of clicking through endless menus and battling technical friction.
+                        </p>
+        
+                        <p>
+                            That’s when I started coding. I don't write tools for the sake of programming; I write them for the community. I’m a musician who wants to see other creators stay in the zone. I build scripts and Max for Live devices that bridge the gap between a wild idea and a finished track, ensuring you reach your creative results as fast and intuitively as humanly possible. 
+                        </p>
+        
+                        <p>
+                            My goal is to strip away the technical friction so you can focus purely on the sound. Speed is everything. Creativity is everything. I code so we can all spend less time clicking and more time creating.
+                        </p>
+                    </div>
+        
+                    <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                        <div>
+                            <p class="text-lg font-bold text-white uppercase tracking-widest">WANT TO CONNECT?</p>
+                            <p class="text-gray-500">Drop me a line or share some numbers: <a href="mailto:realsharooms@gmail.com"
+                                    class="text-gray-300 hover:text-white transition">realsharooms@gmail.com</a></p>
+                        </div>
+                        <div class="flex space-x-4 lg:hidden">
+                             <span data-lucide="music" class="text-gray-600 w-8 h-8"></span>
+                             <span data-lucide="code" class="text-gray-600 w-8 h-8"></span>
+                             <span data-lucide="terminal" class="text-gray-600 w-8 h-8"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="container text-center text-gray-600 text-sm">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-6">
+                <a href="index.html" class="text-gray-400 hover:text-white transition font-semibold">Home</a>
+                <a href="fseq.html" class="text-gray-400 hover:text-white transition font-semibold">Products</a>
+                <a href="about.html" class="text-gray-400 hover:text-white transition font-semibold">About me</a>
+                <a href="mailto:realsharooms@gmail.com"
+                    class="text-gray-400 hover:text-white transition font-semibold">Contact</a>
+            </div>
+            <p class="text-gray-500 font-bold mb-1">&copy; 2026 SHAROOMS AUDIO.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('mobile-menu-open');
+                mobileMenuBtn.innerHTML = '<span data-lucide="x" class="w-6 h-6"></span>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('mobile-menu-open');
+                mobileMenuBtn.innerHTML = '<span data-lucide="menu" class="w-6 h-6"></span>';
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

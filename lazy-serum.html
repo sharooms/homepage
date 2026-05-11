@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAZY SERUM - Sharooms</title>
+    <link rel="icon" type="image/png" href="assets/icon_sharooms.png">
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#0a0a0a',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Load Lucide Icons --><script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-highlight: #FFFFFF;
+            --background-dark: #0a0a0a;
+            --card-surface: #1a1a1a;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--primary-highlight);
+        }
+        .container {
+            max-width: 1400px; 
+            margin: 0 auto;
+        }
+        .sharooms-logo {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+            margin-left: -15px;
+        }
+        @media (min-width: 768px) {
+            .sharooms-logo {
+                height: 60px;
+                margin-left: -25px;
+            }
+        }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu, #mobile-menu {
+            border: none !important;
+            border-radius: 0 !important;
+        }
+        .product-hero {
+            background: var(--background-dark);
+        }
+
+        /* Prevent text selection cursor and add premium selection look */
+        * {
+            cursor: default;
+        }
+        a, button, [onclick], .plugin-card, .category-btn {
+            cursor: pointer;
+        }
+        a *, button *, [onclick] *, .plugin-card *, .category-btn * {
+             cursor: inherit;
+        }
+        ::selection {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .product-hero {
+                height: calc(100svh - 80px);
+                overflow: hidden;
+                display: block;
+                padding-top: 0.5rem;
+                padding-bottom: 3.5rem;
+            }
+            .features-section {
+                height: 100svh;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-[10000]">
+        <!-- Header Background & Blur -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm -z-10"></div>
+        <nav class="relative w-full flex items-center justify-between px-6 py-4 md:px-12 md:py-6">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/Sharooms%20logo.png" alt="Sharooms Logo" class="sharooms-logo" onerror="this.onerror=null;this.src='https://placehold.co/150x40/000000/FFFFFF?text=SHAROOMS+ERROR'">
+            </a>
+
+            <div class="hidden md:flex space-x-12 items-center font-medium">
+                <div class="relative dropdown">
+                    <button class="flex items-center text-gray-400 hover:text-white transition duration-150">
+                        Products 
+                        <span data-lucide="chevron-down" class="w-4 h-4 ml-1"></span>
+                    </button>
+                    <div class="dropdown-menu absolute hidden top-full w-56 shadow-2xl overflow-hidden z-[100] bg-black/80 backdrop-blur-sm">
+                        <a href="fseq.html" class="block px-5 py-3 text-sm text-gray-300 hover:bg-gray-800 transition">FSEQ</a>
+                        <a href="lazy-serum.html" class="block px-5 py-3 text-sm text-gray-300 hover:bg-gray-800 transition border-t border-gray-800">Lazy Serum</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="text-gray-400 hover:text-white transition duration-150">About me</a>
+
+                <a href="#" class="inline-flex items-center bg-slate-800 text-white px-6 py-2 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-slate-700 transition shadow-lg whitespace-nowrap">
+                    <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 mr-2">
+                    MY GUMROAD SHOP
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 p-2 rounded-lg hover:bg-gray-800 transition duration-150">
+                <span data-lucide="menu" class="w-6 h-6"></span>
+            </button>
+        </nav>
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden flex-col md:hidden shadow-xl absolute top-full left-0 w-full z-50 bg-black/80 backdrop-blur-sm">
+            <div class="px-6 py-2 font-semibold text-gray-400">Products</div>
+            <a href="fseq.html" class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-800 transition">FSEQ</a>
+            <a href="lazy-serum.html" class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-800 transition">Lazy Serum</a>
+            <a href="about.html" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 transition border-t border-gray-800">About me</a>
+            <a href="#" class="block px-6 py-4 bg-slate-800 text-white font-bold uppercase tracking-wider text-sm hover:bg-slate-700 transition border-t border-gray-800 flex items-center">
+                <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 mr-3">
+                MY GUMROAD SHOP
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="md:min-h-[calc(100svh-108px)] md:flex md:flex-col">
+        <section class="product-hero md:flex-1 md:pt-4 md:pb-6 relative flex flex-col justify-center min-h-0">
+            <div class="w-full max-w-[1600px] mx-auto h-full px-4 md:px-12 flex flex-col md:flex-row gap-6 md:gap-12 md:items-center">
+                <div class="flex-1">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-0 md:mb-1 tracking-tighter uppercase leading-tight">LAZY SERUM</h1>
+                    <span class="block text-gray-500 font-bold tracking-widest uppercase text-xs md:text-sm mb-4 md:mb-4">Ableton live script</span>
+                    <p class="text-lg md:text-xl lg:text-2xl text-gray-400 mb-4 md:mb-6 font-light max-w-2xl leading-relaxed">
+                        The ultimate hardware synthesizer workflow for Xfer Serum. Control presets, wavetables and effects directly via your Akai MIDImix.
+                    </p>
+                    <div class="flex flex-col gap-3 2xl:flex-row 2xl:items-center 2xl:gap-6">
+                        <div class="flex items-center gap-4 md:gap-6">
+                            <span class="text-2xl md:text-4xl font-extrabold text-white tracking-widest uppercase">FREE</span>
+                            <a href="https://sharooms.gumroad.com/l/lazyserum" target="_blank" class="flex-1 md:flex-none inline-flex items-center justify-center bg-white text-black px-6 py-2 md:px-10 md:py-4 rounded-md font-bold uppercase tracking-wider hover:bg-gray-200 transition shadow-2xl text-sm md:text-base whitespace-nowrap">
+                                <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3">
+                                GET ON GUMROAD
+                            </a>
+                        </div>
+                        <a href="assets/LSmanual.pdf" target="_blank" class="hidden 2xl:inline-flex items-center justify-center bg-slate-800 text-white px-6 py-2 md:px-10 md:py-4 rounded-md font-bold uppercase tracking-wider border border-gray-700 hover:bg-slate-700 transition text-sm md:text-base whitespace-nowrap">
+                            <span data-lucide="file-text" class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-gray-400"></span>
+                            VIEW MANUAL
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-[1.1] w-full min-h-0 flex items-center justify-center mt-6 md:mt-0">
+                    <div class="w-full h-full overflow-hidden flex items-center justify-center">
+                        <img src="assets/Lazyserum.png" alt="Lazyserum Preview" class="w-full h-full object-contain md:max-h-[55vh]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section py-8 md:pt-4 md:pb-8 bg-black relative flex-none">
+            <div class="w-full max-w-[1600px] mx-auto px-4 md:px-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-6 pb-2 md:pb-4 tracking-wider uppercase">Features at a Glance</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-x-8 md:gap-y-6">
+                    <div class="space-y-2 md:space-y-4">
+                        <h3 class="text-xs md:text-xl font-bold text-white uppercase tracking-wide">Seamless Integration</h3>
+                        <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Transforms the compact Akai MIDImix into a tactile command center for Serum.</p>
+                    </div>
+                    <div class="space-y-2 md:space-y-4">
+                        <h3 class="text-xs md:text-xl font-bold text-white uppercase tracking-wide">Auto-Focus</h3>
+                        <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Automatically maps to the selected track or locks to a specific Serum instance via script.</p>
+                    </div>
+                    <div class="space-y-2 md:space-y-4">
+                        <h3 class="text-xs md:text-xl font-bold text-white uppercase tracking-wide">Preset Browsing</h3>
+                        <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Navigate directly through your preset library and scroll through wavetables via hardware.</p>
+                    </div>
+                    <div class="space-y-2 md:space-y-4">
+                        <h3 class="text-xs md:text-xl font-bold text-white uppercase tracking-wide">4 Modes</h3>
+                        <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Switch between four perfectly mapped layers (Serum 1, 2, FX, and DAW Mode).</p>
+                    </div>
+                    <div class="space-y-2 md:space-y-4">
+                        <h3 class="text-xs md:text-xl font-bold text-white uppercase tracking-wide">Plot Overlay</h3>
+                        <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Included ready-to-use template for a professional fitting physical overlay.</p>
+                    </div>
+                    <div class="space-y-2 md:space-y-4">
+                        <h3 class="text-xs md:text-xl font-bold text-white uppercase tracking-wide">System Requirements</h3>
+                        <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Perfectly optimized for Ableton Live 12 and current Serum versions.</p>
+                    </div>
+                </div>
+                <!-- Mobile only Manual Button -->
+                <div class="mt-12 2xl:hidden flex justify-center">
+                    <a href="assets/LSmanual.pdf" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center bg-slate-800 text-white px-8 py-4 md:px-12 md:py-5 rounded-md font-bold uppercase tracking-wider border border-gray-700 hover:bg-slate-700 transition text-sm md:text-base shadow-xl">
+                        <span data-lucide="file-text" class="w-6 h-6 mr-3 text-gray-400"></span>
+                        VIEW MANUAL
+                    </a>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <!-- Global Mobile Down Arrow -->
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" style="z-index: 9999999; pointer-events: none;" id="global-scroll-arrow">
+        <span data-lucide="chevron-down" class="w-10 h-10"></span>
+    </div>
+
+    <!-- Footer --><footer class="bg-black py-12 border-t border-gray-900">
+        <div class="container text-center text-gray-600 text-sm">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-6">
+                <a href="index.html" class="text-gray-400 hover:text-white transition font-semibold">Home</a>
+                <a href="fseq.html" class="text-gray-400 hover:text-white transition font-semibold">Products</a>
+                <a href="about.html" class="text-gray-400 hover:text-white transition font-semibold">About me</a>
+                <a href="mailto:info@sharooms.audio" class="text-gray-400 hover:text-white transition font-semibold">Contact</a>
+            </div>
+            <p class="text-gray-500 font-bold mb-1">&copy; 2024 SHAROOMS AUDIO.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('mobile-menu-open');
+                mobileMenuBtn.innerHTML = '<span data-lucide="x" class="w-6 h-6"></span>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('mobile-menu-open');
+                mobileMenuBtn.innerHTML = '<span data-lucide="menu" class="w-6 h-6"></span>';
+            }
+            lucide.createIcons();
+        });
+
+        /* Fullpage Mobile Swipe Logic */
+        let tsY = 0;
+        let lastSwipeTime = 0;
+        let swipeCombo = 1;
+        let activeTween = null;
+        let isAnimating = false;
+
+        function customScrollTo(targetY, duration = 400) {
+            document.body.style.overflow = 'hidden';
+            if (activeTween) {
+                cancelAnimationFrame(activeTween);
+                activeTween = null;
+            }
+            
+            const startY = window.scrollY;
+            const delta = targetY - startY;
+            const startTime = performance.now();
+
+            function step(currentTime) {
+                let elapsed = currentTime - startTime;
+                let progress = Math.min(elapsed / duration, 1);
+                // easeOutQuart 
+                let ease = 1 - Math.pow(1 - progress, 4);
+                
+                window.scrollTo(0, startY + delta * ease);
+
+                if (progress < 1) {
+                    activeTween = requestAnimationFrame(step);
+                } else {
+                    activeTween = null;
+                    isAnimating = false;
+                    document.body.style.overflow = '';
+                }
+            }
+            activeTween = requestAnimationFrame(step);
+        }
+
+        window.addEventListener('touchstart', (e) => {
+            tsY = e.touches[0].clientY;
+        }, {passive: true});
+
+        window.addEventListener('touchmove', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault(); 
+            }
+        }, {passive: false});
+
+        window.addEventListener('touchend', (e) => {
+            if (window.innerWidth > 768) return;
+            if (isAnimating) return;
+
+            let teY = e.changedTouches[0].clientY;
+            let deltaY = tsY - teY;
+
+            if (Math.abs(deltaY) > 30) {
+                const featuresSection = document.querySelector('.features-section');
+                const footer = document.querySelector('footer');
+                
+                let snapTargets = [
+                    0, 
+                    window.scrollY + featuresSection.getBoundingClientRect().top,
+                    window.scrollY + footer.getBoundingClientRect().top
+                ];
+                
+                let currentY = window.scrollY;
+                let closestIndex = 0;
+                let minDiff = Infinity;
+                for(let i=0; i<snapTargets.length; i++) {
+                    let diff = Math.abs(snapTargets[i] - currentY);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        closestIndex = i;
+                    }
+                }
+
+                let nextIndex = deltaY > 0 ? closestIndex + 1 : closestIndex - 1;
+                if (nextIndex < 0) nextIndex = 0;
+                if (nextIndex >= snapTargets.length) nextIndex = snapTargets.length - 1;
+
+                isAnimating = true;
+                customScrollTo(snapTargets[nextIndex], 400);
+            }
+        });
+    </script>
+</body>
+</html>
+
