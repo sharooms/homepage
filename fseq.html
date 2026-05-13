@@ -382,10 +382,10 @@
             </div>
         </section>
 
-        <section class="features-section py-8 md:pt-4 md:pb-8 bg-black relative flex-none">
+        <section class="features-section h-[100svh] md:h-auto flex flex-col justify-center py-4 md:pt-4 md:pb-8 bg-black relative flex-none">
             <div class="w-full max-w-[1600px] mx-auto px-4 md:px-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 md:mb-6 pb-2 md:pb-4 tracking-wider">FEATURES AT A GLANCE</h2>
-                <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-x-8 md:gap-y-6">
+                <h2 class="text-xl md:text-3xl font-bold text-white mb-4 md:mb-6 pb-2 tracking-wider">FEATURES AT A GLANCE</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-y-3 gap-x-4 md:gap-x-8 md:gap-y-6">
                     <div class="space-y-2 md:space-y-4">
                         <h3 class="text-xs md:text-xl font-bold text-white uppercase tracking-wide">Scalable Grid</h3>
                         <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Program detailed grooves with up to 64 steps per pattern.</p>
@@ -428,7 +428,7 @@
                     </div>
                 </div>
                 <!-- Mobile only Manual Button -->
-                <div class="mt-12 2xl:hidden flex justify-center">
+                <div class="mt-4 md:mt-12 2xl:hidden flex justify-center">
                     <a href="assets/FseqManual.pdf" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center bg-zinc-800 text-white px-8 py-4 md:px-12 md:py-5 rounded-md font-bold uppercase tracking-wider border border-zinc-700 hover:bg-zinc-700 transition text-sm md:text-base shadow-xl">
                         <span data-lucide="file-text" class="w-6 h-6 mr-3 text-gray-400"></span>
                         VIEW MANUAL
@@ -489,180 +489,180 @@
             <div class="container mx-auto px-4 md:px-12 py-12 md:py-24">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-x-24 md:gap-y-32">
                     <!-- Video 1: Drum Sequencer -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/build.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/build.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Performance</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Drum Sequencer</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Drum Sequencer</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Create custom drum loops effortlessly. FSEQ offers an intuitive step sequencer interface that makes programming, visualizing, and building your beats fast, fun, and highly visual.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 2: Select -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/select_tool.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/select_tool.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Precision</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Select</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Select</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Edit with surgical precision. Use the select tool to highlight multiple steps or rows, then apply familiar keyboard shortcuts to instantly cut, copy, paste, or duplicate your patterns. You can even use it to apply a random fill to your selection, making complex edits and variations fast and intuitive.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 3: Velocity -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/velocity.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/velocity.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Expression</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Velocity</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Velocity</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Add dynamic expression to your patterns. Paint velocity curves or fine-tune individual steps to bring your drum grooves to life with human-like feel.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 4: Hotkeys -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/hotkeys.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/hotkeys.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Workflow</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Hotkeys</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Hotkeys</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Speed up your workflow with intuitive keyboard shortcuts. Auto-filling, cutting, copying, and pasting entire rows, alongside powerful mouse scroll-wheel functions for quick adjustments.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 5: API Integration -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/api.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/api.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Integration</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">API Integration</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">API Integration</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Experience deep integration with Ableton Live. The bi-directional API communication ensures that your sequencer and Drum Rack are always perfectly in sync, including automatic selection of Drum Rack pads and chains.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 6: Sample Swap -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/sample_tool.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/sample_tool.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Sound Design</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Sample Swap</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Sample Swap</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Audition and swap samples instantly. By directly controlling the chain selector within an Instrument Rack, this tool enables lightning-fast sound replacement. Iterate quickly through your library and effortlessly build complex, custom drumsets.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 7: Preset Management -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/Presets.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/Presets.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">get inspired</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Preset Management</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Preset Management</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Seamlessly save and recall your favorite patterns. Presets are stored as JSON files in a custom folder of your choice,. The integrated preset browser lets you manage your library without leaving the creative workflow. Easily share your custom presets with others and discover new ones to get inspired.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 8: Create -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/create.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/create.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Production</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Create</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Create</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Turn sequences into MIDI clips with a single click. Export patterns directly to Live's Arrangement View and assign custom hotkeys to generate clips on the fly. even when the FSEQ interface is closed.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 9: Manual Mode -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/manual_mode.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/manual_mode.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Customization</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Manual Mode</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Manual Mode</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 Take full control of your sequence names and MIDI notes. Manual mode allows you to bypass Drum Rack integration for custom mappings and unique hardware setups. You can even save your custom configurations as presets, so they are instantly ready to use with your favorite instruments.
                             </p>
                         </div>
                     </div>
 
                     <!-- Video 10: Ableton Themes -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
-                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
-                            <video src="assets/schema.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start py-16 md:py-0 px-4">
+                        <div class="relative w-full max-h-[45svh] md:max-h-none shrink min-h-0 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-4 md:mb-8 group border border-white/10">
+                            <video src="assets/schema.mp4" class="lazy-video w-full h-full object-contain md:object-cover" muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <div class="flex items-center gap-3">
                                 <span class="w-8 h-[2px] bg-white/20"></span>
                                 <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Style</span>
                             </div>
-                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Ableton Themes</h3>
-                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                            <h3 class="text-2xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Ableton Themes</h3>
+                            <p class="text-gray-400 text-base md:text-xl leading-relaxed max-w-xl">
                                 FSEQ changes with the Ableton color theme. This ensures that the interface always fits perfectly into your workspace, regardless of whether you prefer a dark or light theme.
                             </p>
                         </div>
@@ -681,14 +681,14 @@
                     <h2 class="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase mb-16 leading-none">System Requirements</h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-24">
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <h3 class="text-lg md:text-xl font-bold text-white uppercase tracking-wider">Software</h3>
                             <p class="text-gray-400 text-base md:text-lg leading-relaxed">
                                 Ableton Live Suite (Max for Live is required). Ableton Live 12.4 is required to use all features.
                             </p>
                         </div>
                         
-                        <div class="space-y-4">
+                        <div class="space-y-2 md:space-y-4 shrink-0">
                             <h3 class="text-lg md:text-xl font-bold text-white uppercase tracking-wider">Memory & Performance</h3>
                             <p class="text-gray-400 text-base md:text-lg leading-relaxed">
                                 While FSEQ has a very low CPU footprint, loading hundreds of samples into large Drum Racks is heavily RAM-intensive, making 16GB the minimum requirement and 32GB highly recommended.
@@ -1108,6 +1108,47 @@
                     arrow.style.opacity = '1';
                     arrow.style.transform = 'translate(-50%, 0)';
                 }
+            }
+        });
+        // Intersection Observer for Lazy Video Autoplay
+        document.addEventListener("DOMContentLoaded", () => {
+            const lazyVideos = document.querySelectorAll("video.lazy-video");
+            
+            if ("IntersectionObserver" in window) {
+                const videoObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        const video = entry.target;
+                        if (entry.isIntersecting) {
+                            // Video is in view, play it
+                            const playPromise = video.play();
+                            if (playPromise !== undefined) {
+                                playPromise.catch(error => {
+                                    // Auto-play was prevented (e.g. Low Power Mode)
+                                    // Add controls so user can manually play if they want
+                                    video.controls = true;
+                                });
+                            }
+                        } else {
+                            // Video out of view, pause to save battery/decode limit
+                            video.pause();
+                        }
+                    });
+                }, {
+                    rootMargin: "50px 0px",
+                    threshold: 0.1
+                });
+
+                lazyVideos.forEach(video => {
+                    videoObserver.observe(video);
+                });
+            } else {
+                // Fallback for extremely old browsers (just play all)
+                lazyVideos.forEach(video => {
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(e => video.controls = true);
+                    }
+                });
             }
         });
     </script>
