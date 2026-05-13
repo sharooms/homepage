@@ -324,7 +324,7 @@
 
                 <a href="about.html" class="text-gray-400 hover:text-white transition duration-150">About me</a>
 
-                <a href="#" class="inline-flex items-center bg-zinc-800 text-white px-6 py-2 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-zinc-700 transition shadow-lg whitespace-nowrap">
+                <a href="https://sharooms.gumroad.com/l/FSEQ" target="_blank" class="inline-flex items-center bg-zinc-800 text-white px-6 py-2 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-zinc-700 transition shadow-lg whitespace-nowrap">
                     <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 mr-2">
                     MY GUMROAD SHOP
                 </a>
@@ -340,7 +340,7 @@
             <a href="fseq.html" class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-800 transition">FSEQ</a>
             <a href="lazy-serum.html" class="block pl-10 pr-6 py-2 text-sm text-gray-400 hover:bg-gray-800 transition">Lazy Serum</a>
             <a href="about.html" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 transition border-t border-gray-800">About me</a>
-            <a href="#" class="block px-6 py-4 bg-zinc-800 text-white font-bold uppercase tracking-wider text-sm hover:bg-zinc-700 transition border-t border-zinc-800 flex items-center">
+            <a href="https://sharooms.gumroad.com/l/FSEQ" target="_blank" class="block px-6 py-4 bg-zinc-800 text-white font-bold uppercase tracking-wider text-sm hover:bg-zinc-700 transition border-t border-zinc-800 flex items-center">
                 <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 mr-3">
                 MY GUMROAD SHOP
             </a>
@@ -357,11 +357,17 @@
                     <p class="text-lg md:text-xl lg:text-2xl text-gray-400 mb-4 md:mb-6 font-light max-w-2xl">
                         Next-Level Drum Sequencing. A powerful, fully integrated step sequencer for Ableton Live, optimized for Drum Racks.
                     </p>
-                    <div class="flex items-center gap-4 md:gap-6">
-                        <span class="text-2xl md:text-4xl font-extrabold text-white tracking-widest">$6.00</span>
-                        <a href="#" class="inline-flex items-center bg-white text-black px-6 py-2 md:px-10 md:py-4 rounded-md font-bold uppercase tracking-wider hover:bg-gray-200 transition shadow-2xl text-sm md:text-base">
-                            <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3">
-                            GET ON GUMROAD
+                    <div class="flex flex-col gap-3 2xl:flex-row 2xl:items-center 2xl:gap-6">
+                        <div class="flex items-center gap-4 md:gap-6">
+                            <span class="text-2xl md:text-4xl font-extrabold text-white tracking-widest">$6.00</span>
+                            <a href="https://sharooms.gumroad.com/l/FSEQ" target="_blank" class="inline-flex items-center bg-white text-black px-6 py-2 md:px-10 md:py-4 rounded-md font-bold uppercase tracking-wider hover:bg-gray-200 transition shadow-2xl text-sm md:text-base whitespace-nowrap">
+                                <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3">
+                                GET ON GUMROAD
+                            </a>
+                        </div>
+                        <a href="assets/FseqManual.pdf" target="_blank" class="hidden 2xl:inline-flex items-center justify-center bg-zinc-800 text-white px-6 py-2 md:px-10 md:py-4 rounded-md font-bold uppercase tracking-wider border border-zinc-700 hover:bg-zinc-700 transition text-sm md:text-base whitespace-nowrap">
+                            <span data-lucide="file-text" class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-gray-400"></span>
+                            VIEW MANUAL
                         </a>
                     </div>
                     <p class="text-gray-500 mt-2 md:mt-4 text-xs md:text-sm">* A purchase also covers all future updates!</p>
@@ -421,6 +427,13 @@
                         <p class="text-[10px] md:text-base text-gray-500 leading-relaxed">Paint notes and velocity curves or use context menus for fast fills.</p>
                     </div>
                 </div>
+                <!-- Mobile only Manual Button -->
+                <div class="mt-12 2xl:hidden flex justify-center">
+                    <a href="assets/FseqManual.pdf" target="_blank" class="w-full md:w-auto inline-flex items-center justify-center bg-zinc-800 text-white px-8 py-4 md:px-12 md:py-5 rounded-md font-bold uppercase tracking-wider border border-zinc-700 hover:bg-zinc-700 transition text-sm md:text-base shadow-xl">
+                        <span data-lucide="file-text" class="w-6 h-6 mr-3 text-gray-400"></span>
+                        VIEW MANUAL
+                    </a>
+                </div>
             </div>
         </section>
         </div>
@@ -460,8 +473,8 @@
                     <div class="scrolly-content" id="scrolly-content">
                         <div id="scrolly-desc-container"></div>
                         <!-- Skip to Showcase -->
-                        <button onclick="document.getElementById('video-showcase').scrollIntoView({ behavior: 'smooth' })" 
-                                class="mt-20 px-10 py-4 border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all duration-500 uppercase text-sm md:text-lg font-black tracking-[0.5em] pointer-events-auto backdrop-blur-sm">
+                        <button onclick="doSkipOverview(this, event)"
+                                class="mt-20 px-10 py-4 border border-white/20 md:hover:border-white md:hover:bg-white md:hover:text-black transition-all duration-500 uppercase text-sm md:text-lg font-black tracking-[0.5em] pointer-events-auto backdrop-blur-sm">
                             SKIP OVERVIEW
                         </button>
                     </div>
@@ -476,7 +489,7 @@
             <div class="container mx-auto px-4 md:px-12 py-12 md:py-24">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-x-24 md:gap-y-32">
                     <!-- Video 1: Drum Sequencer -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/build.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -494,7 +507,7 @@
                     </div>
 
                     <!-- Video 2: Select -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/select_tool.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -512,7 +525,7 @@
                     </div>
 
                     <!-- Video 3: Velocity -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/velocity.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -530,7 +543,7 @@
                     </div>
 
                     <!-- Video 4: Hotkeys -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/hotkeys.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -548,7 +561,7 @@
                     </div>
 
                     <!-- Video 5: API Integration -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/api.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -566,7 +579,7 @@
                     </div>
 
                     <!-- Video 6: Sample Swap -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/sample_tool.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -584,7 +597,7 @@
                     </div>
 
                     <!-- Video 7: Preset Management -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/Presets.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -602,7 +615,7 @@
                     </div>
 
                     <!-- Video 8: Create -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/create.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -620,7 +633,7 @@
                     </div>
 
                     <!-- Video 9: Manual Mode -->
-                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center">
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
                         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
                             <video src="assets/manual_mode.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -636,10 +649,28 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- Video 10: Ableton Themes -->
+                    <div class="video-page-item h-[100svh] md:h-auto flex flex-col justify-center md:justify-start">
+                        <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 shadow-2xl mb-8 group border border-white/10">
+                            <video src="assets/schema.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-[2px] bg-white/20"></span>
+                                <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase">Style</span>
+                            </div>
+                            <h3 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">Ableton Themes</h3>
+                            <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                                FSEQ changes with the Ableton color theme. This ensures that the interface always fits perfectly into your workspace, regardless of whether you prefer a dark or light theme.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         <!-- System Requirements Section -->
-        <section id="system-requirements" class="video-page-item relative bg-black border-t border-white/5 h-[100svh] md:h-auto flex flex-col justify-center overflow-hidden">
+        <section id="system-requirements" class="video-page-item relative bg-black border-t border-white/5 h-[100svh] md:h-auto flex flex-col justify-center md:justify-start overflow-hidden">
             <div class="container mx-auto px-4 md:px-12 relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <div class="flex items-center gap-4 mb-8 opacity-40">
@@ -699,6 +730,23 @@
 
     <script>
         lucide.createIcons();
+        
+        function doSkipOverview(btn, event) {
+            if (event) event.preventDefault();
+            btn.classList.add('bg-white', 'text-black', 'border-white');
+            const target = document.getElementById('video-showcase');
+            if (target) {
+                const targetY = window.scrollY + target.getBoundingClientRect().top;
+                if (window.innerWidth <= 768 && typeof customScrollTo === 'function') {
+                    customScrollTo(targetY, 600);
+                } else {
+                    window.scrollTo({ top: targetY, behavior: 'smooth' });
+                }
+            }
+            setTimeout(() => {
+                btn.classList.remove('bg-white', 'text-black', 'border-white');
+            }, 800);
+        }
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         mobileMenuBtn.addEventListener('click', () => {
@@ -850,7 +898,6 @@
             if (lastStepIndex !== stepIndex) {
                 lastStepIndex = stepIndex;
                 scrollyContent.style.opacity = '0';
-                scrollyContent.style.pointerEvents = 'none';
                 setTimeout(() => {
                     if (currentStep.hl.opacity > 0) {
                         const titleHtml = currentStep.title ? `<h3>${currentStep.title}</h3>` : '';
@@ -864,7 +911,6 @@
                         scrollyDescContainer.innerHTML = rawDesc;
                         scrollyContent.style.top = currentStep.contentTop || "32%";
                         scrollyContent.style.opacity = '1';
-                        scrollyContent.style.pointerEvents = 'auto';
                     } else {
                         scrollyDescContainer.innerHTML = '';
                     }
