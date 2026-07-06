@@ -183,7 +183,7 @@
             }
             /* Make the feature card wrappers solid black */
             .video-page-item > div {
-                background-color: #000000 !important;
+                background-color: #0a0a0a !important;
                 border-color: rgba(227, 205, 255, 0.15) !important;
                 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9) !important;
                 position: relative;
@@ -272,10 +272,10 @@
                     rgba(10, 10, 10, 0.9) 62vh,
                     rgba(10, 10, 10, 0.93) 92vh);
             }
-            /* Keep the video cards solid black (like the mobile version) so the
-               water shows only around them, not through the card itself */
+            /* Keep the video cards opaque (matte #0a0a0a, like the site bg) so
+               the water shows only around them, not through the card itself */
             .video-page-item > div {
-                background-color: #000000 !important;
+                background-color: #0a0a0a !important;
             }
         }
     </style>
@@ -284,7 +284,7 @@
 <body class="antialiased min-h-screen">
 
     <!-- Header & Navigation -->
-    <header class="absolute top-0 left-0 w-full z-[10000] md:sticky">
+    <header class="fixed top-0 left-0 w-full z-[10000] md:sticky">
         <!-- Header Background & Blur -->
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm -z-10"></div>
         <nav class="relative w-full flex items-center justify-between px-6 py-[13px] md:px-12 md:py-[19px]">
@@ -546,7 +546,7 @@
                                         <p class="text-gray-500 text-xs font-semibold">M4L Device</p>
                                     </div>
                                 </div>
-                                <div class="aspect-video w-full overflow-hidden rounded-md mb-4 bg-black">
+                                <div class="aspect-video w-full overflow-hidden rounded mb-4 bg-black">
                                     <video class="w-full h-full object-contain" autoplay muted loop playsinline>
                                         <source src="assets/FSEQ0.mp4" type="video/mp4">
                                     </video>
@@ -556,7 +556,10 @@
                             </a>
                             <div class="flex flex-col w-full mt-auto pt-4 border-t border-gray-900 gap-2">
                                 <div class="flex justify-between items-center w-full">
-                                    <span class="text-3xl font-black text-white tracking-widest leading-none drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">$19</span>
+                                    <div class="flex flex-col leading-none">
+                                        <span class="text-sm font-bold text-gray-500 line-through tracking-widest">$19</span>
+                                        <span class="text-3xl font-black text-white tracking-widest leading-none drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">$14</span>
+                                    </div>
                                     <a href="https://sharooms.gumroad.com/l/FSEQ" target="_blank" class="inline-flex items-center bg-white text-black px-5 py-2 rounded-md font-bold text-sm uppercase tracking-wider hover:bg-gray-200 transition duration-200">
                                         <img src="assets/gumroad.svg" alt="Gumroad" class="w-4 h-4 mr-2"> GET ON GUMROAD
                                     </a>

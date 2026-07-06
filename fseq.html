@@ -361,7 +361,10 @@
                     <div class="flex flex-col gap-3">
                         <div class="flex flex-col justify-center gap-2 md:gap-3">
                             <div class="flex items-center justify-between w-full md:justify-start md:gap-6">
-                                <span class="text-4xl md:text-6xl font-black text-white tracking-widest leading-none drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]">$19</span>
+                                <div class="flex flex-col leading-none">
+                                    <span class="text-base md:text-xl font-bold text-gray-500 line-through tracking-widest">$19</span>
+                                    <span class="text-4xl md:text-6xl font-black text-white tracking-widest leading-none drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]">$14</span>
+                                </div>
                                 <a href="https://sharooms.gumroad.com/l/FSEQ" target="_blank" class="inline-flex items-center bg-white text-black px-6 py-2 md:px-10 md:py-4 rounded-md font-bold uppercase tracking-wider hover:bg-gray-200 transition shadow-2xl text-sm md:text-base whitespace-nowrap">
                                     <img src="assets/gumroad.svg" alt="Gumroad" class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3">
                                     GET ON GUMROAD
@@ -376,11 +379,13 @@
                     <p class="text-gray-500 mt-2 md:mt-4 text-xs md:text-sm">* A purchase also covers all future updates!</p>
                 </div>
                 <div class="flex-1 w-full min-h-0 flex items-center justify-center mt-2 md:mt-0">
-                    <div class="w-full h-full overflow-hidden">
-                        <video class="w-full h-full object-contain" autoplay muted loop playsinline>
-                            <source src="assets/FSEQ0.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                    <!-- rounded sits on the video element itself; on mobile the
+                         video renders at its natural size (max-w/max-h) so the
+                         rounded corners are on the video, not on letterboxed
+                         empty space. Desktop keeps filling the column as before. -->
+                    <video class="max-w-full max-h-full md:w-full md:h-full object-contain rounded" autoplay muted loop playsinline>
+                        <source src="assets/FSEQ0.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </section>
